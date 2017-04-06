@@ -277,13 +277,10 @@ public class ChallengeActivity extends Activity {
             return;
         }
 
-
-        btn1.setText(answers.get(0).substring(2));
-        Log.d("TAG", "Name: " + answers.get(0));
-        Log.d("TAG", "Name2: " + answers.get(0).substring(2));
-        btn2.setText(answers.get(1).substring(2));
-        btn3.setText(answers.get(2).substring(2));
-        btn4.setText(answers.get(3).substring(2));
+        btn1.setText(answers.get(0));
+        btn2.setText(answers.get(1));
+        btn3.setText(answers.get(2));
+        btn4.setText(answers.get(3));
 
 
 
