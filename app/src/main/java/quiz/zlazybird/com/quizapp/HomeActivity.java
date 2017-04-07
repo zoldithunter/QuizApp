@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -86,12 +85,12 @@ public class HomeActivity extends Activity {
 
         //list images and them to the images array
         try {
-            String[] files = getAssets().list("aimages");
+            String[] files = getAssets().list("animal");
             for (String file : files) {
                 img = new ImageItem();
                 String[] parts = file.split("\\.");
-                img.setName(parts[0].replaceAll("-", " "));
-                img.setPath("aimages/"+file);
+                img.setName(parts[0]);
+                img.setPath("animal/" +file);
                 images.add(img);
             }
         } catch (IOException e) {

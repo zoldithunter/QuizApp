@@ -222,6 +222,7 @@ public class ChallengeActivity extends Activity {
     private void createQuestion(){
 
         int randomFileIndex;
+        Log.d("TAG", "Next question: " + imagesShuffled.get(currentQuestion).getName());
 
         if(currentQuestion%10 == 0 && interstitial.isLoaded()){
             displayInterstitial();
@@ -230,8 +231,6 @@ public class ChallengeActivity extends Activity {
 
         //picks a random number for the answer
         correctAnswer = 0 + (int)(Math.random() * ((3 - 0) + 1));
-        Log.d("TAG", "Int Correct: " + correctAnswer);
-        Log.d("TAG", "Before Correct: " + imagesShuffled.get(currentQuestion).getName());
 
         //create an array of answers from file names
         ArrayList<String> answers = new ArrayList<String>();
@@ -261,8 +260,6 @@ public class ChallengeActivity extends Activity {
 
         }
 
-
-
         try
         {
             // get input stream
@@ -272,8 +269,9 @@ public class ChallengeActivity extends Activity {
             // set image to ImageView
             mainIV.setImageDrawable(d);
         }
-        catch(IOException ex)
+        catch(Exception ex)
         {
+            Log.d("TAG", "Exception: " +ex.getMessage());
             return;
         }
 
@@ -288,16 +286,10 @@ public class ChallengeActivity extends Activity {
         btn2.setBackgroundDrawable(d);
         btn3.setBackgroundDrawable(d);
         btn4.setBackgroundDrawable(d);
-
-
-
     }
-
-
 
     private void submitAnswer(int answer){
 
-        Log.d("TAG", "Correct: " + imagesShuffled.get(currentQuestion).getName());
         if(answer == correctAnswer){
             currentQuestion++;
             playerScore++;
