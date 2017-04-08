@@ -35,7 +35,7 @@ public class ResultsActivity extends Activity {
 //    TextView moreBT;
     TextView titleTV;
     TextView descriptionTV;
-    TextView levelTV;
+//    TextView levelTV;
     TextView scoreTV;
     TextView highScoreTV;
 
@@ -70,7 +70,7 @@ public class ResultsActivity extends Activity {
 
         titleTV = (TextView) findViewById(R.id.result_title_text_view);
         descriptionTV = (TextView) findViewById(R.id.description_text_view);
-        levelTV = (TextView) findViewById(R.id.level_text_view);
+//        levelTV = (TextView) findViewById(R.id.level_text_view);
         scoreTV = (TextView) findViewById(R.id.current_score_text_view);
         highScoreTV = (TextView) findViewById(R.id.highest_score_text_view);
 
@@ -95,7 +95,7 @@ public class ResultsActivity extends Activity {
 
 
         if (playerScore > 0){
-            levelTV.setText(HomeActivity.images.get((playerScore - 1)).getName().substring(2));
+//            levelTV.setText(HomeActivity.images.get((playerScore - 1)).getName());
 
 
             try
@@ -114,7 +114,7 @@ public class ResultsActivity extends Activity {
 
         }else{
             titleTV.setText(getString(R.string.not_good_enough_text));
-            levelTV.setText(R.string.negative_score_description);
+//            levelTV.setText(R.string.negative_score_description);
             descriptionTV.setText("");
         }
 

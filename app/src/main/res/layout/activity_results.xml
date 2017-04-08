@@ -45,15 +45,15 @@
             android:layout_height="wrap_content"
             android:textColor="#ffffff"/>
 
-        <TextView
-            android:id="@+id/level_text_view"
-            android:text="Shadow"
-            android:textSize="40dp"
-            android:padding="15dp"
-            android:gravity="center_horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff"/>
+        <!--<TextView-->
+            <!--android:id="@+id/level_text_view"-->
+            <!--android:text="Shadow"-->
+            <!--android:textSize="40dp"-->
+            <!--android:padding="15dp"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="#ffffff"/>-->
 
         <TextView
             android:layout_weight="1"
