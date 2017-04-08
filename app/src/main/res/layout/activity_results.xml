@@ -93,16 +93,16 @@
                 android:layout_weight="1"
                 android:textColor="#ffffff"/>
 
-            <TextView
-                android:id="@+id/exit_text_view"
-                android:text="More"
-                android:textSize="@dimen/result_button_size"
-                android:background="@color/result_buttons_color"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:textColor="#ffffff"/>
+            <!--<TextView-->
+                <!--android:id="@+id/exit_text_view"-->
+                <!--android:text="More"-->
+                <!--android:textSize="@dimen/result_button_size"-->
+                <!--android:background="@color/result_buttons_color"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:textColor="#ffffff"/>-->
 
         </LinearLayout>
 

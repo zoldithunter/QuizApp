@@ -33,7 +33,7 @@ public class HomeActivity extends Activity {
 
     TextView startTV;
     TextView highScoreTV;
-    TextView homeTV;
+//    TextView homeTV;
     ImageView mainBackgroundIV;
 
     SharedPreferences storage;
@@ -59,7 +59,7 @@ public class HomeActivity extends Activity {
         mainLayout = (RelativeLayout) findViewById(R.id.home_main_activity_layout);
         startTV = (TextView) findViewById(R.id.home_start_text_view);
         highScoreTV = (TextView) findViewById(R.id.home_high_score_text_view);
-        homeTV = (TextView) findViewById(R.id.home_more_text_view);
+//        homeTV = (TextView) findViewById(R.id.home_more_text_view);
         mainBackgroundIV = (ImageView) findViewById(R.id.home_background_image);
 
         // Restore preferences
@@ -113,12 +113,12 @@ public class HomeActivity extends Activity {
             }
         });
 
-        homeTV.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                MenuFunctions.openMore(context);
-            }
-        });
+//        homeTV.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                MenuFunctions.openMore(context);
+//            }
+//        });
 
 
         //picks a random number for the home background

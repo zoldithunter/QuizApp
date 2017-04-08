@@ -32,7 +32,7 @@ public class ResultsActivity extends Activity {
     RelativeLayout resultLL;
 
     TextView retryBT;
-    TextView moreBT;
+//    TextView moreBT;
     TextView titleTV;
     TextView descriptionTV;
     TextView levelTV;
@@ -65,7 +65,7 @@ public class ResultsActivity extends Activity {
 
         resultLL = (RelativeLayout) findViewById(R.id.result_layout);
         retryBT = (TextView) findViewById(R.id.retry_text_view);
-        moreBT = (TextView) findViewById(R.id.exit_text_view);
+//        moreBT = (TextView) findViewById(R.id.exit_text_view);
 
 
         titleTV = (TextView) findViewById(R.id.result_title_text_view);
@@ -137,16 +137,16 @@ public class ResultsActivity extends Activity {
             }
         });
 
-        moreBT.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                MenuFunctions.openMore(context);
-                //Show interestitial and close the app
-                //TODO: Add store listing here
-            }
-        });
+//        moreBT.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//
+//                MenuFunctions.openMore(context);
+//                //Show interestitial and close the app
+//                //TODO: Add store listing here
+//            }
+//        });
 
     }
 
