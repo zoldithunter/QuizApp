@@ -148,8 +148,6 @@ public class ResultsActivity extends Activity {
             }
         });
 
-
-
     }
 
 

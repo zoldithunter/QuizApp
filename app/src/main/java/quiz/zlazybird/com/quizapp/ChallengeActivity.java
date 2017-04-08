@@ -222,9 +222,8 @@ public class ChallengeActivity extends Activity {
     private void createQuestion(){
 
         int randomFileIndex;
-        Log.d("TAG", "Next question: " + imagesShuffled.get(currentQuestion).getName());
 
-        if(currentQuestion%10 == 0 && interstitial.isLoaded()){
+        if(currentQuestion == imagesShuffled.size() && interstitial.isLoaded()){
             displayInterstitial();
             initAdmobInterstitial();
         }
@@ -234,15 +233,7 @@ public class ChallengeActivity extends Activity {
 
         //create an array of answers from file names
         ArrayList<String> answers = new ArrayList<String>();
-        List<Integer> categoryList = new ArrayList<Integer>();
-
-        for (int subArrayFlag = 0; subArrayFlag < imagesShuffled.size();subArrayFlag++){
-            if(imagesShuffled.get(currentQuestion).getName().substring(0,1)
-                    .equalsIgnoreCase(imagesShuffled.get(subArrayFlag).getName().substring(0, 1))){
-                categoryList.add(subArrayFlag);
-
-            }
-        }
+        List<Integer> tmpList = new ArrayList<Integer>();
 
         //get 3 random answers and add it to the array
         for (int i = 0 ; i < 4 ;i++ ){
@@ -252,10 +243,13 @@ public class ChallengeActivity extends Activity {
             }else {
 
                 do {
-                    randomFileIndex = (int) (Math.random() * categoryList.size());
-                } while ( categoryList.get(randomFileIndex) == currentQuestion && categoryList.size() > 0 );
+                    randomFileIndex = new Random().nextInt(imagesShuffled.size());
 
-                answers.add(imagesShuffled.get(categoryList.get(randomFileIndex)).getName());
+                } while (randomFileIndex == currentQuestion || tmpList.contains(randomFileIndex));
+
+                tmpList.add(randomFileIndex);
+
+                answers.add(imagesShuffled.get(randomFileIndex).getName());
             }
 
         }
