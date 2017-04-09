@@ -81,7 +81,6 @@ public class ChallengeActivity extends Activity {
         btn3 = (TextView) findViewById(R.id.choice_button_3);
         btn4 = (TextView) findViewById(R.id.choice_button_4);
 
-
         timerTV = (TextView) findViewById(R.id.timer_text_view);
         scoreTV = (TextView) findViewById(R.id.score_text_view);
 
@@ -229,7 +228,7 @@ public class ChallengeActivity extends Activity {
         }
 
         //picks a random number for the answer
-        correctAnswer = 0 + (int)(Math.random() * ((3 - 0) + 1));
+        correctAnswer = new Random().nextInt(4);
 
         //create an array of answers from file names
         ArrayList<String> answers = new ArrayList<String>();

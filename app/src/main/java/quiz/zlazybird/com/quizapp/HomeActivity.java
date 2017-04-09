@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -22,7 +23,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-import quiz.zlazybird.com.quizapp.Utils.MenuFunctions;
 import quiz.zlazybird.com.quizapp.model.ImageItem;
 
 public class HomeActivity extends Activity {
@@ -33,7 +33,7 @@ public class HomeActivity extends Activity {
 
     TextView startTV;
     TextView highScoreTV;
-//    TextView homeTV;
+    TextView musicTV;
     ImageView mainBackgroundIV;
 
     SharedPreferences storage;
@@ -59,7 +59,7 @@ public class HomeActivity extends Activity {
         mainLayout = (RelativeLayout) findViewById(R.id.home_main_activity_layout);
         startTV = (TextView) findViewById(R.id.home_start_text_view);
         highScoreTV = (TextView) findViewById(R.id.home_high_score_text_view);
-//        homeTV = (TextView) findViewById(R.id.home_more_text_view);
+        musicTV = (TextView) findViewById(R.id.home_bg_music);
         mainBackgroundIV = (ImageView) findViewById(R.id.home_background_image);
 
         // Restore preferences
@@ -110,6 +110,14 @@ public class HomeActivity extends Activity {
             public void onClick(View v) {
                 initNewGame();
 
+            }
+        });
+
+        musicTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MediaPlayer mp = MediaPlayer.create(HomeActivity.this, R.raw.bg_music);
+                mp.start();
             }
         });
 
